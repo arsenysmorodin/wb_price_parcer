@@ -9,16 +9,23 @@
 Первым делом убедитесь, что у вас установлен NodeJS и NPM (https://nodejs.org/ - инструкция по установке)
 
 Затем проверьте версию node и npm и правильность установки:
-`node -v`
-`npm -v`
+
+```shell
+node -v
+npm -v
+```
 
 ### Клонирование репозитория
 
-`git clone https://github.com/arsenysmorodin/wb_price_parcer.git`
+```shell
+git clone https://github.com/arsenysmorodin/wb_price_parcer.git
+```
 
 ### Установка зависимостей
 
-`npm install`
+```shell
+npm install
+```
 
 ## Использование
 
@@ -26,25 +33,23 @@
 
 Важно сохранить структуру и типы данных:
 
-```
+```js
 {
-	'product1':
-		[
-			'url1',
-			'url2'
-		],
-	'product2':
-		[
-			'url1',
-			'url2'
-		],
+ 'product1':
+	 [
+		 'url1',
+		 'url2'
+	 ],
+ 'product2':
+	 [
+		 'url1',
+		 'url2'
+	 ],
 }
 ```
 
 ### Запуск скрипта
 
-`npm run parse`
-
-```
-
+```shell
+npm run parse
 ```
