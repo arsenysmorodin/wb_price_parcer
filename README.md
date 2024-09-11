@@ -3,7 +3,9 @@
 Позволяет получать отчет по минимальной и средней цене конкурентов на выбранные товары
 
 ## Установка
+
 ### Установка NodeJS
+
 Первым делом убедитесь, что у вас установлен NodeJS и NPM (https://nodejs.org/ - инструкция по установке)
 
 Затем проверьте версию node и npm и правильность установки:
@@ -11,27 +13,38 @@
 `npm -v`
 
 ### Клонирование репозитория
-`git clone https://github.com/arsenysmorodin/wb_price_parcer.git` 
+
+`git clone https://github.com/arsenysmorodin/wb_price_parcer.git`
 
 ### Установка зависимостей
+
 `npm install`
 
 ## Использование
 
 ### Отредактируйте файл products.json
+
 Важно сохранить структуру и типы данных:
-`{`
-	`'product1':` 
-		`[`
-			`'url1',`
-			`'url2'`
-		 `],` 
-	`'product2':` 
-		`[`
-			`'url1',`
-			`'url2'`
-		 `],` 
-`}`
+
+```
+{
+	'product1':
+		[
+			'url1',
+			'url2'
+		],
+	'product2':
+		[
+			'url1',
+			'url2'
+		],
+}
+```
 
 ### Запуск скрипта
-`node index.js`
+
+`npm run parse`
+
+```
+
+```
