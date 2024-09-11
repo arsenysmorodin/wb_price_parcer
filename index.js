@@ -1,15 +1,5 @@
+import { promises as fs } from "fs" // Импортируем модуль для работы с файлами
 import { launch } from "puppeteer"
-
-const products = {
-	"Держатель ковриков для автомойки": [
-		"https://www.wildberries.ru/catalog/241462726/detail.aspx",
-		"https://www.wildberries.ru/catalog/36051174/detail.aspx",
-	],
-	"Кондиционер для кожи": [
-		"https://www.wildberries.ru/catalog/168166285/detail.aspx",
-		"https://www.wildberries.ru/catalog/64123255/detail.aspx",
-	],
-}
 
 async function run($url) {
 	const browser = await launch()
@@ -30,6 +20,10 @@ async function run($url) {
 }
 
 async function getPrices() {
+	// Читаем файл products.json и парсим его содержимое
+	const data = await fs.readFile("./products.json", "utf-8")
+	const products = JSON.parse(data)
+
 	const result = {}
 
 	for (const product in products) {
